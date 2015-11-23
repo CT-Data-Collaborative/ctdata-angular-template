@@ -6,7 +6,9 @@ angular.module('app')
         $scope.toggle = sidebarDisplay.toggle;
         $scope.categories = categories.list;
 
-        $scope.$watch(function() {
+        // Sample watch...doesn't do much, but demonstrates how
+        // to watch object from a service
+        $scope.$watchCollection(function() {
             return $scope.categories;
         }, function() {
             console.log("Selection Detected");

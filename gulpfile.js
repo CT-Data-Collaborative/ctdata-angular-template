@@ -13,7 +13,7 @@ gulp.task('js', function() {
       .pipe(uglify())
      .pipe(sourcemaps.write())
      .pipe(gulp.dest('static/dist/js/'))
-})
+});
 
 
 gulp.task('sass', function() {
@@ -23,7 +23,8 @@ gulp.task('sass', function() {
 });
 
 
-gulp.task('watch', ['js'], function () {
-  gulp.watch('src/**/*.js', ['js'])
+gulp.task('default', function () {
+  gulp.watch('static/js/**/*.js', ['js']),
+  gulp.watch('static/sass/**/*.scss', ['sass'])
 })
 

@@ -264,17 +264,6 @@
   padding-bottom: 2rem;
   background: white; }
 
-.actions, .title {
-  padding-left: 1rem; }
-
-.actions, .title {
-  padding-top: 1rem; }
-
-.actions {
-  padding-left: 2rem; }
-  .actions button.btn.ctdata-btn {
-    margin-right: 1rem; }
-
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -283,6 +272,14 @@
   margin: 0;
   padding: 0;
   list-style: none; }
+  .sidebar-nav .actions, .sidebar-nav .title {
+    padding-left: 1rem; }
+  .sidebar-nav .actions, .sidebar-nav .title {
+    padding-top: 1rem; }
+  .sidebar-nav .actions {
+    padding-left: 2rem; }
+    .sidebar-nav .actions button.btn.ctdata-btn {
+      margin-right: 1rem; }
   .sidebar-nav li {
     background: #F2F2EA;
     cursor: pointer; }
