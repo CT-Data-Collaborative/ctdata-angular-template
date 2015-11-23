@@ -23,11 +23,13 @@ gulp.task('sass', function() {
      .pipe(gulp.dest('./static/dist/css'));
 });
 
+// will server on localhost:8080 or 0.0.0.0:8080
 gulp.task('webserver', function() {
   connect.server()
 });
 
 gulp.task('default', function () {
+  // will server on localhost:8080 or 0.0.0.0:8080
   connect.server(),
   gulp.watch('static/js/**/*.js', ['js']),
   gulp.watch('static/sass/**/*.scss', ['sass'])
