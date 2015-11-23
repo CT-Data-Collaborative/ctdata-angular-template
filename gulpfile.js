@@ -4,6 +4,7 @@ var sass = require('gulp-sass')
 var sourcemaps = require('gulp-sourcemaps')
 var uglify = require('gulp-uglify')
 var ngAnnotate = require('gulp-ng-annotate')
+var connect = require('gulp-connect')
 
 gulp.task('js', function() {
     gulp.src(['static/js/**/module.js', 'static/js/**/*/*.js'])
@@ -22,8 +23,12 @@ gulp.task('sass', function() {
      .pipe(gulp.dest('./static/dist/css'));
 });
 
+gulp.task('webserver', function() {
+  connect.server()
+});
 
 gulp.task('default', function () {
+  connect.server(),
   gulp.watch('static/js/**/*.js', ['js']),
   gulp.watch('static/sass/**/*.scss', ['sass'])
 })

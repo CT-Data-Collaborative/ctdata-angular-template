@@ -7,7 +7,7 @@ angular.module('app')
         $scope.categories = categories.list;
 
         // Sample watch...doesn't do much, but demonstrates how
-        // to watch object from a service
+        // to watch object from a service.
         $scope.$watchCollection(function() {
             return $scope.categories;
         }, function() {
